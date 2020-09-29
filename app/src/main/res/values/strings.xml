@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">07-interaksi-pengguna-room_7_</string>
+
+    <string-array name="android_dropdown_arrays">
+        <item>Pilih Jurusan</item>
+        <item>Teknik Informatika</item>
+        <item>Teknik Sipil</item>
+        <item>Teknik Mesin</item>
+        <item>Teknik Kimia</item>
+        <item>Akuntansi</item>
+        <item>Teknik Elektro</item>
+    </string-array>
 </resources>
