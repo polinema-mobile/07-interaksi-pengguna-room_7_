@@ -28,20 +28,20 @@ public class resultpage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resultpage);
 
-        txtHello = (TextView) findViewById(R.id.txtHello);
+        txtHello = (TextView) findViewById(R.id.txtNama);
         Bundle extras = getIntent().getExtras();
         nama = extras.getString(KEY_NAME);
         txtHello.setText(nama);
 
-        txtHello1 = (TextView) findViewById(R.id.txtHello1);
+        txtHello1 = (TextView) findViewById(R.id.txtNim);
         nim = extras.getString(KEY_NIM);
         txtHello1.setText(nim);
 
-        txtHello2 = (TextView) findViewById(R.id.txtHello2);
+        txtHello2 = (TextView) findViewById(R.id.txtTTG);
         tanggal = extras.getString(KEY_DATE);
         txtHello2.setText(tanggal);
 
-        txtRadio = (TextView) findViewById(R.id.txtRadio);
+        txtRadio = (TextView) findViewById(R.id.txtKelamin);
         radio = extras.getString(KEY_JENISKELAMIN);
         txtRadio.setText(radio);
 
