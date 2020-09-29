@@ -43,7 +43,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextNim" />
 
     <RadioGroup
-        android:id="@+id/radioGroup2"
+        android:id="@+id/radioGroup"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -57,7 +57,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextDate">
 
         <RadioButton
-            android:id="@+id/radioButtonLaki-laki"
+            android:id="@+id/radioButtonLakilaki"
             android:layout_width="189dp"
             android:layout_height="wrap_content"
             android:text="LAKI-LAKI" />
@@ -82,7 +82,7 @@
         android:textStyle="bold"
 
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
     <Spinner
         android:id="@+id/spinner1"
