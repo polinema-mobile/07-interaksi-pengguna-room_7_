@@ -12,43 +12,29 @@ public class resultpage extends AppCompatActivity {
     TextView txtRadio;
     TextView txtJurusan;
 
-    private  String nama;
-    private  String KEY_NAME = "NAMA";
-    private  String nim;
-    private  String KEY_NIM = "NIM";
-    private  String tanggal;
-    private  String KEY_DATE = "DATE";
-    private  String radio;
-    private  String KEY_JENISKELAMIN = "RADIO_BUTTON";
-    private  String jurusan;
-    private  String KEY_JURUSAN = "JURUSAN";
+    private  String KEY_BIODATA = "BIODATA";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resultpage);
+        Bundle extras = getIntent().getExtras();
+        Biodata biodata = extras.getParcelable(KEY_BIODATA);
 
         txtHello = (TextView) findViewById(R.id.txtNama);
-        Bundle extras = getIntent().getExtras();
-        nama = extras.getString(KEY_NAME);
-        txtHello.setText(nama);
+        txtHello.setText(biodata.getNama());
 
         txtHello1 = (TextView) findViewById(R.id.txtNim);
-        nim = extras.getString(KEY_NIM);
-        txtHello1.setText(nim);
+        txtHello1.setText(biodata.getNim());
 
         txtHello2 = (TextView) findViewById(R.id.txtTTG);
-        tanggal = extras.getString(KEY_DATE);
-        txtHello2.setText(tanggal);
+        txtHello2.setText(biodata.getTanggal());
 
         txtRadio = (TextView) findViewById(R.id.txtKelamin);
-        radio = extras.getString(KEY_JENISKELAMIN);
-        txtRadio.setText(radio);
+        txtRadio.setText(biodata.getJenisKelamin());
 
         txtJurusan = (TextView) findViewById(R.id.txtJurusan);
-        jurusan = extras.getString(KEY_JURUSAN);
-        txtJurusan.setText(jurusan);
-
+        txtJurusan.setText(biodata.getJurusan());
 
 
 

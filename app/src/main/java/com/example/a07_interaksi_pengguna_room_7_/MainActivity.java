@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private String KEY_JENISKELAMIN = "RADIO_BUTTON";
     private String KEY_DATE = "DATE";
     private String KEY_JURUSAN = "JURUSAN";
+    private String KEY_BIODATA = "BIODATA";
 
 
     @Override
@@ -92,13 +93,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             String tanggal = textdate.getText().toString();
             int radio = radioGroup.getCheckedRadioButtonId(); //mengambil nilai id dari radio
             String jurusan = spin.getSelectedItem().toString();
+            Biodata biodata = new Biodata(nama,nim,tanggal,jurusan,cekJenisKelamin(radio));
             if (nama != "" && nim != ""){
                 Intent i = new Intent(MainActivity.this, resultpage.class); //SEND DATA
-                i.putExtra(KEY_NAME, nama);
-                i.putExtra(KEY_NIM, nim);
-                i.putExtra(KEY_DATE,tanggal);
-                i.putExtra(KEY_JENISKELAMIN, cekJenisKelamin(radio));
-                i.putExtra(KEY_JURUSAN, jurusan);
+                i.putExtra(KEY_BIODATA, biodata);
                 startActivity(i);
             }else{
                 Toast.makeText(getApplication(), "diisi ", Toast.LENGTH_SHORT);
